@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    <header class="bg-slate-200 sticky top-0 z-50">
+    <header class="bg-lime-100 sticky top-0 z-50">
         <nav class="container mx-auto">
             <div class="navbar">
                 <div class="navbar-start">
@@ -35,7 +35,7 @@
                 <div class="navbar-end">
                   <div class="flex items-center justify-center space-x-2">
                     <img src="./assets/coin.png" alt="">
-                    <p class="font-bold text-gray-600">5500</p><span class="font-extrabold text-gray-600">$</span>
+                    <p id="userBalanceAmount" class="font-bold text-gray-600">5500</p><span class="font-extrabold text-gray-600">$</span>
                   </div>
                 </div>
               </div>
@@ -45,11 +45,11 @@
          <div class="container mx-auto mt-8">
         <!-- button section  -->
             <div class="flex items-center justify-center space-x-4 p-8">
-                <button class="btn bg-lime-400 font-bold border-2 border-gray-200 px-8">Donation</button>
-                <button class="btn bg-white font-bold border-2 border-gray-200 px-8">History</button>
+                <button id="donaton-view" class="btn bg-lime-400 font-bold border-2 border-gray-200 px-8">Donation</button>
+                <button id="history-view" class="btn font-bold border-2 border-gray-200 px-8">History</button>
              </div>
         <!-- card section  -->
-             <div class="card-wrapper">
+             <div id="donationField" class="card-wrapper mb-8">
                 <div class="border-2 border-gray-100 rounded">
                     <div class="shadow-xl p-6">
                         <div class="card lg:card-side bg-base-100">
@@ -57,18 +57,18 @@
                             <div class="card-body">
                                 <div class="flex items-center justify-start space-x-2">
                                     <img src="./assets/coin.png" alt="">
-                                    <p class="font-extrabold text-gray-600"><span>500</span>$</p>
+                                    <p class="font-extrabold text-gray-600"><span id="noakhaliBalanceAmount">500</span>$</p>
                                 </div>
                                 <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
                                 <p class="text-slate-500"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                                 <input
                                     type="number"
-                                    id="savings"
+                                    id="noakhaliInputField"
                                     class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                                     placeholder="Write Donation Amount"
                                 />
                                 <div class="card-actions mt-2">
-                                    <button class="btn bg-lime-400 w-full font-bold" onclick="my_modal_5.showModal()">Donate Now</button>
+                                    <button id="donate-noakhali" class="btn bg-lime-400 w-full font-bold" onclick="my_modal_5.showModal()">Donate Now</button>
                                     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                                         <div class="modal-box flex flex-col items-center">
                                             <h3 class="text-5xl font-bold">Congrats!</h3>
@@ -94,18 +94,18 @@
                             <div class="card-body">
                                 <div class="flex items-center justify-start space-x-2">
                                     <img src="./assets/coin.png" alt="">
-                                    <p class="font-extrabold text-gray-600"><span>1000</span>$</p>
+                                    <p class="font-extrabold text-gray-600"><span id="feniBalanceAmount">1000</span>$</p>
                                 </div>
                                 <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
                                 <p class="text-slate-500">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
                                 <input
                                     type="number"
-                                    id="savings"
+                                    id="feniInputField"
                                     class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                                     placeholder="Write Donation Amount"
                                 />
                                 <div class="card-actions mt-2">
-                                    <button class="btn bg-lime-400 w-full font-bold" onclick="my_modal_6.showModal()">Donate Now</button>
+                                    <button id="donate-feni" class="btn bg-lime-400 w-full font-bold" onclick="my_modal_6.showModal()">Donate Now</button>
                                     <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
                                         <div class="modal-box flex flex-col items-center">
                                             <h3 class="text-5xl font-bold">Congrats!</h3>
@@ -131,18 +131,18 @@
                             <div class="card-body">
                                 <div class="flex items-center justify-start space-x-2">
                                     <img src="./assets/coin.png" alt="">
-                                    <p class="font-extrabold text-gray-600"><span>1200</span>$</p>
+                                    <p class="font-extrabold text-gray-600"><span id="quotaBalanceAmount">1200</span>$</p>
                                 </div>
                                 <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
                                 <p class="text-slate-500">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                                 <input
                                     type="number"
-                                    id="savings"
+                                    id="quotaInputField"
                                     class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                                     placeholder="Write Donation Amount"
                                 />
                                 <div class="card-actions mt-2">
-                                    <button class="btn bg-lime-400 w-full font-bold" onclick="my_modal_7.showModal()">Donate Now</button>
+                                    <button id="donate-quota" class="btn bg-lime-400 w-full font-bold" onclick="my_modal_7.showModal()">Donate Now</button>
                                     <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
                                         <div class="modal-box flex flex-col items-center">
                                             <h3 class="text-5xl font-bold">Congrats!</h3>
@@ -163,12 +163,9 @@
                  </div>
              </div>
         <!-- history section  -->
-             <div class="history-wrapper my-16">
-                <div class="card bg-base-100 border-2 border-gray-200 my-4">
-                    <div class="card-body bor">
-                      <h2 class="card-title">Card title!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                    </div>
+             <div class="history-wrapper ">
+                <div id="historyField" class="card bg-base-100 border-2 border-gray-200 my-12 hidden">
+
                 </div>
              </div>
          </div>
@@ -177,5 +174,6 @@
 
     </footer>
     <script src="./js/main.js"></script>
+    <script src="js/utilities.js"></script>
 </body>
 </html>
