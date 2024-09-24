@@ -46,7 +46,7 @@
             <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
                 <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
                 <div class="collapse-content">
-                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                  <p>The Document Object Model (DOM) is a programming interface that represents an HTML document as a tree structure. It provides a way for JavaScript to interact with the elements, attributes, and content of a web page. Think of it as a hierarchical representation of the document, where the root is the <html> element, and child elements are nested beneath it.</p>
                 </div>
             </div>
         </div>
@@ -54,7 +54,22 @@
             <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
                 <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                  <p>There are several methods to select elements from the DOM: <br>
+                    <br>
+                    getElementById(): Selects an element by its unique ID attribute.<br>
+                    getElementsByTagName(): Selects elements by their tag name.<br>
+                    getElementsByClassName(): Selects elements by their class name.<br>
+                    querySelector(): Selects the first element that matches a CSS selector.<br>
+                    querySelectorAll(): Selects all elements that match a CSS selector.<br>
+                    <br>
+                Example:<br>
+                <br>
+                const paragraph = document.getElementById("myParagraph");<br>
+                const links = document.getElementsByTagName("a");<br>
+                const divs = document.getElementsByClassName("myDiv");<br>
+                const firstDiv = document.querySelector(".myDiv");<br>
+                const allDivs = document.querySelectorAll(".myDiv");<br>
+                </p>
                 </div>
             </div>
         </div>
@@ -62,7 +77,13 @@
             <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
                 <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
                 <div class="collapse-content">
-                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                  <p>
+                    Event delegation is a method where you add an event listener to a parent element, and that listener handles events for its child elements. Instead of adding separate listeners to each child, you rely on the parent to manage them all. This is especially useful when you have many child elements that need the same event to be handled (like clicks). <br>
+                    <br>
+                    Why is it useful?<br>
+                    Better performance: You don’t need to add a listener to every child, which saves memory and makes your code run faster.<br>
+                    Handles dynamic content: It's easier to manage new elements added to the page (like list items). The parent’s listener will automatically handle these.<br>
+                    Cleaner code: Centralizing event handling on the parent makes the code simpler and easier to maintain.</p>
                 </div>
             </div>
         </div>
@@ -70,7 +91,36 @@
             <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
                 <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
                 <div class="collapse-content">
-                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                  <p>You can manipulate an element’s attributes and styles using the DOM through JavaScript. <br>
+                    <br>
+                    Attributes:<br>
+                    
+                    getAttribute(): Gets the value of an attribute.<br>
+                    setAttribute(): Sets the value of an attribute.<br>
+                    removeAttribute(): Removes an attribute. <br>
+                    <br>
+                    Example:<br>
+                    
+                    const image = document.getElementById("myImage");<br>
+                    console.log(image.getAttribute("src"));<br>
+                    image.setAttribute("alt", "A beautiful image");<br>
+                    image.removeAttribute("width");<br>
+                    <br>
+                    Styles:<br>
+                    
+                    style property: Directly access and modify an element's inline styles.<br>
+                    classList property: Add, remove, or toggle classes on an element.<br>
+                    getComputedStyle(): Gets the computed style of an element, including inherited styles.<br>
+                    <br>
+                    Example:<br>
+                    
+                    const paragraph = document.getElementById("myParagraph");<br>
+                    paragraph.style.color = "red";<br>
+                    paragraph.classList.add("bold");<br>
+                    paragraph.classList.remove("italic");<br>
+                    const computedStyle = window.getComputedStyle(paragraph);<br>
+                    console.log(computedStyle.fontSize);<br>
+                    </p>
                 </div>
             </div>
         </div>
