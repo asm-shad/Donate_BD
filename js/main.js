@@ -1,5 +1,5 @@
 
-// const noakhaliInput = getInputFieldValueById('noakhaliInputField');
+//const noakhaliInput = getInputFieldValueById('noakhaliInputField');
 // const feniInput = getInputFieldValueById('feniInputField');
 // const quotaInput = getInputFieldValueById('quotaInputField');
 
@@ -8,12 +8,7 @@
 // const feniBalance = getTextFieldValueById('feniBalanceAmount');
 // const quotaBalance = getTextFieldValueById('quotaBalanceAmount');
 
-// console.log(noakhaliInput);
-
-document.getElementById('donate-noakhali').addEventListener('click', function(){
-    const noakhaliInput = getInputFieldValueById('noakhaliInputField');
-    console.log(noakhaliInput);
-});
+//console.log(noakhaliInput);
 
 const historyField = document.getElementById('history-view');
 const donationField = document.getElementById('donaton-view');
@@ -32,4 +27,16 @@ donationField.addEventListener('click', function(){
 
     document.getElementById('donationField').classList.remove('hidden');
     document.getElementById('historyField').classList.add('hidden');
+});
+
+document.getElementById('donate-noakhali').addEventListener('click', function(){
+    const noakhaliInput = getInputFieldValueById('noakhaliInputField');
+    const userBalance = getTextFieldValueById('userBalanceAmount');
+    const noakhaliBalance = getTextFieldValueById('noakhaliBalanceAmount');
+
+    const userNewBalance = userBalance - noakhaliInput;
+    const noakhaliNewBalance = noakhaliBalance + noakhaliInput;
+
+    document.getElementById('userBalanceAmount').innerText = userNewBalance;
+    document.getElementById('noakhaliBalanceAmount').innerText = noakhaliNewBalance;
 });
