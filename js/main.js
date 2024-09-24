@@ -34,9 +34,24 @@ document.getElementById('donate-noakhali').addEventListener('click', function(){
     const userBalance = getTextFieldValueById('userBalanceAmount');
     const noakhaliBalance = getTextFieldValueById('noakhaliBalanceAmount');
 
-    const userNewBalance = userBalance - noakhaliInput;
-    const noakhaliNewBalance = noakhaliBalance + noakhaliInput;
+    if(noakhaliInput > userBalance){
+        alert('Invalid Data');
+    } 
+    else {
+        const userNewBalance = userBalance - noakhaliInput;
+        const noakhaliNewBalance = noakhaliBalance + noakhaliInput;
 
-    document.getElementById('userBalanceAmount').innerText = userNewBalance;
-    document.getElementById('noakhaliBalanceAmount').innerText = noakhaliNewBalance;
+        document.getElementById('userBalanceAmount').innerText = userNewBalance;
+        document.getElementById('noakhaliBalanceAmount').innerText = noakhaliNewBalance;
+
+        const historyItem = document.createElement('div');
+        historyItem.className = 'bg-white p-4'
+
+        historyItem.innerHTML = `
+            <h3 class="font-bold">${noakhaliInput} Taka is Donated for Flood Relief in Noakhali, Bangladesh</h3>
+            <p class="text-xs text-gray-500">Date: ${new Date().toString()}</p>
+        `;
+        const historyContainer = document.getElementById('historyField');
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+    }
 });
