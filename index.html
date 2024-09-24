@@ -9,13 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
 </head>
 <body>
     <header class="bg-slate-200">
         <nav class="container mx-auto">
             <div class="navbar">
                 <div class="navbar-start">
-                    <button class="btn btn-success">Blog</button>
+                    <button class="btn bg-lime-400 px-8">Blog</button>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                   <div class="menu menu-horizontal px-1">
@@ -28,18 +33,17 @@
                 <div class="navbar-end">
                   <div class="flex items-center justify-center space-x-2">
                     <img src="./assets/coin.png" alt="">
-                    <p class="font-extrabold text-gray-600">5500</p><span class="font-extrabold text-gray-600">$</span>
+                    <p class="font-bold text-gray-600">5500</p><span class="font-extrabold text-gray-600">$</span>
                   </div>
                 </div>
               </div>
         </nav>
     </header>
-    <main>
-        
+    <main>   
          <div class="container mx-auto mt-8">
         <!-- button section  -->
             <div class="flex items-center justify-center space-x-4 p-8">
-                <button class="btn bg-lime-500 font-bold border-2 border-gray-200 px-8">Donation</button>
+                <button class="btn bg-lime-400 font-bold border-2 border-gray-200 px-8">Donation</button>
                 <button class="btn bg-white font-bold border-2 border-gray-200 px-8">History</button>
              </div>
         <!-- card section  -->
@@ -62,16 +66,16 @@
                                     placeholder="Write Donation Amount"
                                 />
                                 <div class="card-actions mt-2">
-                                    <!-- Open the modal using ID.showModal() method -->
-                                    <button class="btn btn-primary w-full font-bold" onclick="my_modal_5.showModal()">Donate Now</button>
+                                    <button class="btn bg-lime-400 w-full font-bold" onclick="my_modal_5.showModal()">Donate Now</button>
                                     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                                        <div class="modal-box">
-                                            <h3 class="text-lg font-bold">Hello!</h3>
-                                            <p class="py-4">Press ESC key or click the button below to close</p>
+                                        <div class="modal-box flex flex-col items-center">
+                                            <h3 class="text-5xl font-bold">Congrats!</h3>
+                                            <img class="p-6" src="./assets/coin.png" alt="">
+                                            <p class="py-4">You Have Donated for Humankind</p>
+                                            <h4 class="text-xl font-bold">Successfully</h4>
                                             <div class="modal-action">
                                                 <form method="dialog">
-                                                    <!-- if there is a button in form, it will close the modal -->
-                                                    <button class="btn">Close</button>
+                                                    <button class="btn">close confirmation</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -99,16 +103,16 @@
                                     placeholder="Write Donation Amount"
                                 />
                                 <div class="card-actions mt-2">
-                                    <!-- Open the modal using ID.showModal() method -->
-                                    <button class="btn btn-primary w-full font-bold" onclick="my_modal_6.showModal()">Donate Now</button>
+                                    <button class="btn bg-lime-400 w-full font-bold" onclick="my_modal_6.showModal()">Donate Now</button>
                                     <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
-                                        <div class="modal-box">
-                                            <h3 class="text-lg font-bold">Hello!</h3>
-                                            <p class="py-4">Press ESC key or click the button below to close</p>
+                                        <div class="modal-box flex flex-col items-center">
+                                            <h3 class="text-5xl font-bold">Congrats!</h3>
+                                            <img class="p-6" src="./assets/coin.png" alt="">
+                                            <p class="py-4">You Have Donated for Humankind</p>
+                                            <h4 class="text-xl font-bold">Successfully</h4>
                                             <div class="modal-action">
                                                 <form method="dialog">
-                                                    <!-- if there is a button in form, it will close the modal -->
-                                                    <button class="btn">Close</button>
+                                                    <button class="btn">close confirmation</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -136,16 +140,16 @@
                                     placeholder="Write Donation Amount"
                                 />
                                 <div class="card-actions mt-2">
-                                    <!-- Open the modal using ID.showModal() method -->
-                                    <button class="btn btn-primary w-full font-bold" onclick="my_modal_7.showModal()">Donate Now</button>
+                                    <button class="btn bg-lime-400 w-full font-bold" onclick="my_modal_7.showModal()">Donate Now</button>
                                     <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
-                                        <div class="modal-box">
-                                            <h3 class="text-lg font-bold">Hello!</h3>
-                                            <p class="py-4">Press ESC key or click the button below to close</p>
+                                        <div class="modal-box flex flex-col items-center">
+                                            <h3 class="text-5xl font-bold">Congrats!</h3>
+                                            <img class="p-6" src="./assets/coin.png" alt="">
+                                            <p class="py-4">You Have Donated for Humankind</p>
+                                            <h4 class="text-xl font-bold">Successfully</h4>
                                             <div class="modal-action">
                                                 <form method="dialog">
-                                                    <!-- if there is a button in form, it will close the modal -->
-                                                    <button class="btn">Close</button>
+                                                    <button class="btn">close confirmation</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -157,7 +161,14 @@
                  </div>
              </div>
         <!-- history section  -->
-             
+             <div class="history-wrapper my-16">
+                <div class="card bg-base-100 border-2 border-gray-200 my-4">
+                    <div class="card-body bor">
+                      <h2 class="card-title">Card title!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                    </div>
+                </div>
+             </div>
          </div>
     </main>
     <footer>
